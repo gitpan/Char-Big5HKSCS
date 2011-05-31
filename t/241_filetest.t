@@ -6,10 +6,10 @@ die "This file is not encoded in Big5-HKSCS.\n" if q{‚ } ne "\x82\xa0";
 my $__FILE__ = __FILE__;
 
 use Char::Ebig5hkscs;
-print "1..25\n";
+print "1..24\n";
 
 if ($^O !~ /\A (?: MSWin32 | NetWare | symbian | dos ) \z/oxms) {
-    for my $tno (1..25) {
+    for my $tno (1..24) {
         print "ok - $tno # SKIP $^X $0\n";
     }
     exit;
@@ -172,53 +172,44 @@ else {
     print "not ok - 19 Char::Ebig5hkscs::g_ == -g  $^X $__FILE__\n";
 }
 
-local $^W = 0;
-$_ = 'file';
-if ((Char::Ebig5hkscs::k_ ne '') == (-k ne '')) {
-    print "ok - 20 Char::Ebig5hkscs::k_ == -k  $^X $__FILE__\n";
-}
-else {
-    print "not ok - 20 Char::Ebig5hkscs::k_ == -k  $^X $__FILE__\n";
-}
-
 $_ = 'file';
 if ((Char::Ebig5hkscs::T_ ne '') == (-T ne '')) {
-    print "ok - 21 Char::Ebig5hkscs::T_ == -T  $^X $__FILE__\n";
+    print "ok - 20 Char::Ebig5hkscs::T_ == -T  $^X $__FILE__\n";
 }
 else {
-    print "not ok - 21 Char::Ebig5hkscs::T_ == -T  $^X $__FILE__\n";
+    print "not ok - 20 Char::Ebig5hkscs::T_ == -T  $^X $__FILE__\n";
 }
 
 $_ = 'file';
 if ((Char::Ebig5hkscs::B_ ne '') == (-B ne '')) {
-    print "ok - 22 Char::Ebig5hkscs::B_ == -B  $^X $__FILE__\n";
+    print "ok - 21 Char::Ebig5hkscs::B_ == -B  $^X $__FILE__\n";
 }
 else {
-    print "not ok - 22 Char::Ebig5hkscs::B_ == -B  $^X $__FILE__\n";
+    print "not ok - 21 Char::Ebig5hkscs::B_ == -B  $^X $__FILE__\n";
 }
 
 $_ = 'file';
 if ((Char::Ebig5hkscs::M_ ne '') == (-M ne '')) {
-    print "ok - 23 Char::Ebig5hkscs::M_ == -M  $^X $__FILE__\n";
+    print "ok - 22 Char::Ebig5hkscs::M_ == -M  $^X $__FILE__\n";
 }
 else {
-    print "not ok - 23 Char::Ebig5hkscs::M_ == -M  $^X $__FILE__\n";
+    print "not ok - 22 Char::Ebig5hkscs::M_ == -M  $^X $__FILE__\n";
 }
 
 $_ = 'file';
 if ((Char::Ebig5hkscs::A_ ne '') == (-A ne '')) {
-    print "ok - 24 Char::Ebig5hkscs::A_ == -A  $^X $__FILE__\n";
+    print "ok - 23 Char::Ebig5hkscs::A_ == -A  $^X $__FILE__\n";
 }
 else {
-    print "not ok - 24 Char::Ebig5hkscs::A_ == -A  $^X $__FILE__\n";
+    print "not ok - 23 Char::Ebig5hkscs::A_ == -A  $^X $__FILE__\n";
 }
 
 $_ = 'file';
 if ((Char::Ebig5hkscs::C_ ne '') == (-C ne '')) {
-    print "ok - 25 Char::Ebig5hkscs::C_ == -C  $^X $__FILE__\n";
+    print "ok - 24 Char::Ebig5hkscs::C_ == -C  $^X $__FILE__\n";
 }
 else {
-    print "not ok - 25 Char::Ebig5hkscs::C_ == -C  $^X $__FILE__\n";
+    print "not ok - 24 Char::Ebig5hkscs::C_ == -C  $^X $__FILE__\n";
 }
 
 close(FILE);
