@@ -29,7 +29,7 @@ BEGIN {
 # (and so on)
 
 BEGIN { eval q{ use vars qw($VERSION) } }
-$VERSION = sprintf '%d.%02d', q$Revision: 0.90 $ =~ /(\d+)/oxmsg;
+$VERSION = sprintf '%d.%02d', q$Revision: 0.91 $ =~ /(\d+)/oxmsg;
 
 BEGIN { CORE::require Char::Ebig5hkscs; }
 
@@ -500,7 +500,7 @@ sub Char::Big5HKSCS::escape_script {
         # in Chapter 5: Pattern Matching
         # of ISBN 978-0-596-00492-7 Programming Perl 4th Edition.
 
-        $e_script .= sprintf("use Char::Ebig5hkscs %s;\n", $Char::Big5HKSCS::VERSION); # require run-time routines version
+        $e_script .= sprintf("use Char::Ebig5hkscs %s.0;\n", $Char::Big5HKSCS::VERSION); # require run-time routines version
 
         # use Char::Big5HKSCS version qw(ord reverse getc);
         $function_ord     = 'ord';
@@ -6819,12 +6819,6 @@ Char/Big5HKSCS.pm removes 'bytes::' at head of function name.
   bytes::substr    substr    Byte
   ---------------------------------------
 
-=head1 Escaping Built-in Standard Module (Char/Ebig5hkscs.pm provides)
-
-Char/Ebig5hkscs.pm does "BEGIN { unshift @INC, '/Perl/site/lib/Char::Big5HKSCS' }" at head.
-Store the standard module modified for Char::Big5HKSCS software in this directory to
-override built-in standard modules.
-
 =head1 Escaping Standard Module Content (You do)
 
 You need copy built-in standard module to /Perl/site/lib/Char::Big5HKSCS and change
@@ -7562,3 +7556,4 @@ I am thankful to all persons.
 
 =cut
 
+# Did you fun enough? ^o^)
