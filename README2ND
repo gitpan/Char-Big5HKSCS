@@ -1,14 +1,12 @@
 NAME
 
-       Char::Big5HKSCS - Source code filter for Big5-HKSCS script (Imitation JPerl)
+       Big5HKSCS - Source code filter for Big5-HKSCS script (Imitation JPerl)
 
 SYNOPSIS
 
     In your script:
 
-      use Char::Big5HKSCS; # CPAN formal style
-         or
-      use Big5HKSCS; # casual style
+      use Big5HKSCS;
 
     At command prompt:
 
