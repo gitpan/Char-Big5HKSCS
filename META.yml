@@ -1,7 +1,7 @@
 --- #YAML:1.0
-name: Big5HKSCS
+name: Char::Big5HKSCS
 abstract: Source code filter for Big5-HKSCS script (Imitation JPerl)
-version: 0.96
+version: 0.97
 author:
   - INABA Hitoshi <ina@cpan.org>
 license: perl
